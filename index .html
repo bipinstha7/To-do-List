@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>ToDo List</title>
+
+  <!--   font awesome -->
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+
+  <!--   Roboto google font -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+  <!--  styles -->
+  <link rel="stylesheet" href="css/reset.css">
+  <!--  always use custome style after the reset.css because custome.css overwrites the reset.css styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+  <div id="todoList">
+    <header>
+      <input type="text" placeholder="Enter an activity..." id="item">
+      <button id="add"><i class="fa fa-plus"></i></button>
+    </header>
+
+    <div class="container">
+      <!--   incompleted todo -->
+      <ul class="todo" id="todo"><li>Add your todo list..<div class="divForSpan"><span><i class="fa fa-trash"></i></span><span class="check"><i class="far fa-check-circle"></i></span></div><input class="color" type="color" value="#42a7f4"></li><li>Delete your list<div class="divForSpan"><span><i class="fa fa-trash"></i></span><span class="check"><i class="far fa-check-circle"></i></span></div><input class="color" type="color" value="#42a7f4"></li><li>Complete the list<div class="divForSpan"><span><i class="fa fa-trash"></i></span><span class="check"><i class="far fa-check-circle"></i></span></div><input class="color" type="color" value="#42a7f4"></li></ul>
+
+      <!--    completed todo -->
+      <ul class="todo" id="completed"><li>todo list completed<div class="divForSpan"><span><i class="fa fa-trash"></i></span><span class="check"><i class="fa fa-check-circle"></i></span></div><input class="color" type="color" value="#42a7f4"></li><li>delete or re-do list<div class="divForSpan"><span><i class="fa fa-trash"></i></span><span class="check"><i class="fa fa-check-circle"></i></span></div><input class="color" type="color" value="#42a7f4"></li></ul>
+
+    </div> 
+  </div>
+    
+    
+    <!--  ============================================-->
+    <!-- Incompleted todo
+    <ul class="todo" id="todo">
+      <li>
+        Add your todo list..
+        <div class="buttons">
+          <span><i class="fa fa-trash"></i></span>
+          <span class="check"><i class="far fa-check-circle"></i></span>
+        </div>
+        <input class="color" type="color" value="#42a7f4">
+      </li>
+      <li>
+        Delete your list
+        <div class="buttons">
+          <span><i class="fa fa-trash"></i></span>
+          <span class="check"><i class="far fa-check-circle"></i></span>
+        </div>
+        <input class="color" type="color" value="#42a7f4">
+      </li>
+      <li>
+        Complete the list
+        <div class="buttons">
+          <span><i class="fa fa-trash"></i></span>
+          <span class="check"><i class="far fa-check-circle"></i></span>
+        </div>
+        <input class="color" type="color" value="#42a7f4">
+      </li>
+    </ul>
+    -->
+
+<!-- completed todo
+    <ul class="todo" id="completed">
+      <li>
+        todo list completed
+        <div class="buttons">
+          <span><i class="fa fa-trash"></i></span>
+          <span class="check"><i class="fa fa-check-circle"></i></span>
+        </div>
+        <input class="color" type="color" value="#42a7f4">
+      </li>
+      <li>
+        delete or re-do list
+        <div class="buttons">
+          <span><i class="fa fa-trash"></i></span>
+          <span class="check"><i class="fa fa-check-circle"></i></span>
+        </div>
+        <input class="color" type="color" value="#42a7f4">
+      </li>
+    </ul>
+-->
+<!--   =====================================-->
+
+
+  <!--  javascript -->
+  <script type="text/javascript" src="js/todo.js"></script>
+
+
+</body>
+
+</html>

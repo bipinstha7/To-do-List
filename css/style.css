@@ -1,0 +1,240 @@
+body {
+  background: #edf0f1;
+  padding-top: 80px;
+}
+
+body, input, button {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5; /* without this list goes top of the header while scrolling */
+  -webkit-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #25b99a;
+  -webkit-box-shadow: 0px 2px 4px rgba(44, 64, 80, 0.15);
+  box-shadow: 0px 2px 4px rgba(44, 64, 80, 0.15);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+header input {
+  width: 100%;
+  height: 50px;
+  padding: 0 60px 0 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  text-indent: 10px; /* only pushes the text */
+/*  padding-left: 10px; this pushes the whole input block 10px left and when the whole input is filled by word it does not goes to the start=0, it stays to padding 10px. but indent only pushes the text */
+  background: rgba(255,255,255,0.2);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none; /* removes the outline border when the input focuses*/
+}
+
+
+header input::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.75);
+}
+header input:-ms-input-placeholder {
+  color: rgba(255,255,255,0.75);
+}
+header input::placeholder {
+  color: rgba(255,255,255,0.75);
+}
+
+header button {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  border-radius: 25px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+button .fa-plus {
+  font-size: 25px;
+  color: #25b99a;
+}
+
+.container {
+  width: 100%;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul.todo {
+  width: 100%;
+  float: left;
+}
+
+ul.todo li {
+  width: 100%;
+  min-height: 50px; /* min-height means it can increase if there are more content and during small screen size. */
+  margin-bottom: 10px;
+  background: #fff;
+  border-radius: 5px;
+  position: relative;
+  font-weight: 500;
+  color: #444;
+  line-height: 22px;
+  padding: 14px 100px 14px 14px;
+  -webkit-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 1px 2px rgba(44, 64, 80, 0.10);
+  box-shadow: 0px 1px 2px rgba(44, 64, 80, 0.10);
+}
+
+ul.todo li .divForSpan {
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+ul.todo li .divForSpan span {
+  width: 50px;
+  height: 100%;
+  float: left;
+  position: relative;
+  text-align: center;
+  padding-top: 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.fa-check-circle:after {
+  content: "";
+  width: 1px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  background: #edf0f1;
+}
+
+.fa-trash {
+  color: #c0cecb;
+}
+
+.fa-trash:hover {
+  color: #c85656;
+  cursor: pointer;
+}
+
+.check .far {
+  color: #25b99a;
+}
+
+.check .far:hover {
+  color: rgba(37,185,154,0.5);
+  cursor: pointer;
+}
+
+.check .fa {
+  color: #25b99a;
+  cursor: pointer;
+}
+
+input[type="color"] {
+  float: right;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  padding: 0;
+  margin-top: 3px;
+}
+
+input[type="color"]:hover {
+  width: 17px;
+  height: 17px;
+  cursor: pointer;
+}
+
+
+#completed li {
+  opacity: 0.5;
+}
+
+ul.todo#completed {
+  padding-top: 60px;
+  position: relative;
+}
+
+ul.todo#completed:before {
+  content: "";
+  width: 150px;
+  height: 1px;
+  background: #d8e5e0;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  margin-left: -75px;
+}
+
+ul.todo#todo:empty:after {
+  content: "Add todo list.. ";
+  margin-top: 15px;
+}
+
+ul.todo#completed:empty:after {
+  content: "You haven't completed any task.";
+}
+
+ul.todo#todo:empty:after,
+ul.todo#completed:empty:after {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* 479px wide or less */
+@media only screen and (min-width: 479px) {
+  #todoList, header {
+    width: 420px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .container {
+    padding: 15px 0;
+  }
+  
+  body {
+    padding: 0;
+  }
+}
+
+
+
+
+
+
+
+
