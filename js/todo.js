@@ -49,7 +49,7 @@ function addItems(itemValue) {
   input.setAttribute("value", "#42a7f4");
   li.appendChild(input);
 
-  // var ul = document.getElementById("todo");
+  var ul = document.getElementById("todo");
   ul.insertBefore(li, ul.firstChild);
 
   // delete todo list when trash icon is clicked
