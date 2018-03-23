@@ -2,7 +2,7 @@
 var add = document.getElementById("add");
 
 // when add button is clicked
-add.addEventListener("click", function () { console.log("hey");
+add.addEventListener("click", function () {
   var itemValue = document.getElementById("item").value;
   if (itemValue) { // because empty string is always false and whenever there is value the string is true
 
